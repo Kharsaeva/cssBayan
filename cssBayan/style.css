@@ -1,0 +1,135 @@
+body {
+    background-color: #687466;
+    overflow-y: scroll;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #687466;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.meme-wrapper {
+    padding: 40px 80px 10px 80px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    /* width: 800px; */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.memes-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meme {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.meme input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.meme label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 50px;
+    border: #ffffff 2px solid;
+    line-height: 50px;
+    padding: 0 25px;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.meme label:hover {
+    background-color: #5c695a;
+}
+
+.meme-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: "Inter", serif;
+    margin-bottom: 30px;
+}
+
+.meme input:checked~.meme-content {
+    max-height: 30em;
+    transition: 0.5s;
+}
+
+.meme label::after {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    display: block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+
+.meme input[type="checkbox"]+label::after {
+    content: '';
+    background-image: url(/cssBayan/img/plus.png);
+    top: 0.5em;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    background-size: cover;
+}
+
+.meme input[type="checkbox"]:checked+label::after {
+    content: '';
+    background-image: url(/cssBayan/img/plus.png);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-size: cover;
+    transform: rotate(45deg);
+}
+
+.meme-div {
+    margin: 0 auto;
+}
+
+.meme-img {
+    /* margin-top: 30px; */
+    margin-top: 1em;
+    /* width: 380px; */
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
