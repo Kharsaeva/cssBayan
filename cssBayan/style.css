@@ -118,8 +118,7 @@ input:checked+img {
     opacity: 0;
 }
 
-.meme input:hover~.meme-content,
-.meme:hover~.meme-content {
+.meme input:hover~.meme-content {
     max-height: 30em;
     transition: 1s;
 }
@@ -184,6 +183,4 @@ input:checked+img {
         max-height: 0;
         transition: 0.5s;
     } */
-
-
 }
